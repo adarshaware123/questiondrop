@@ -1,0 +1,388 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  height: 70px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-button {
+  background: #2563eb;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 11px 18px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+.primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  background: white;
+  color: #374151;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  padding: 10px 16px;
+
+  font-size: 14px;
+}
+
+.secondary-button:hover {
+  background: #f9fafb;
+}
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+  margin-bottom: 25px;
+}
+
+.section-heading h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #6b7280;
+}
+
+/* =========================
+   QUESTION CARDS
+========================= */
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.question-card {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  padding: 22px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.question-card:hover {
+  border-color: #93c5fd;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.question-card h2 {
+  margin: 12px 0 10px;
+  font-size: 20px;
+}
+
+.question-card p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.question-card-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* =========================
+   CATEGORY
+========================= */
+
+.category {
+  display: inline-block;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  padding: 5px 10px;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   VIEW QUESTION
+========================= */
+
+.view-question {
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   QUESTION FORM
+========================= */
+
+.question-form {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  padding: 25px;
+
+  margin-bottom: 40px;
+}
+
+.question-form h2 {
+  margin-top: 0;
+}
+
+.question-form form,
+.answer-form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.question-form label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  padding: 12px;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #2563eb;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* =========================
+   QUESTION DETAIL
+========================= */
+
+.question-detail {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  padding: 30px;
+
+  margin-bottom: 35px;
+}
+
+.question-detail h1 {
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.question-content {
+  color: #4b5563;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* =========================
+   ANSWERS
+========================= */
+
+.answers-section {
+  margin-bottom: 35px;
+}
+
+.answers-section h2,
+.answer-form-section h2 {
+  font-size: 22px;
+}
+
+.answer-card {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  padding: 18px;
+
+  margin-bottom: 12px;
+}
+
+.answer-card p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* =========================
+   ANSWER FORM
+========================= */
+
+.answer-form-section {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  padding: 25px;
+
+  margin-bottom: 40px;
+}
+
+/* =========================
+   EMPTY / LOADING
+========================= */
+
+.empty-state {
+  background: white;
+
+  border: 1px dashed #d1d5db;
+  border-radius: 12px;
+
+  padding: 40px;
+
+  text-align: center;
+
+  color: #6b7280;
+}
+
+.empty-state h3 {
+  color: #374151;
+}
+
+.loading {
+  text-align: center;
+  color: #6b7280;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+
+  padding: 30px;
+
+  color: #9ca3af;
+
+  font-size: 14px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .container {
+    width: 92%;
+    margin: 25px auto;
+  }
+
+  .section-heading h1 {
+    font-size: 26px;
+  }
+
+  .question-detail h1 {
+    font-size: 24px;
+  }
+
+  .question-card {
+    padding: 18px;
+  }
+
+  .question-card h2 {
+    font-size: 18px;
+  }
+
+}
